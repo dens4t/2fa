@@ -13,6 +13,7 @@
       padding: 0;
       min-height: 100vh;
     }
+
     .container {
       background: #fff;
       margin: 48px auto 0 auto;
@@ -23,6 +24,7 @@
       max-width: 420px;
       position: relative;
     }
+
     h1 {
       text-align: center;
       color: #1976d2;
@@ -31,9 +33,11 @@
       font-weight: 700;
       letter-spacing: 1px;
     }
+
     .accounts {
       margin-top: 16px;
     }
+
     .account {
       display: flex;
       align-items: center;
@@ -46,14 +50,17 @@
       transition: box-shadow 0.2s;
       position: relative;
     }
+
     .account:hover {
       box-shadow: 0 4px 16px rgba(25, 118, 210, 0.10);
     }
+
     .account-info {
       display: flex;
       align-items: center;
       gap: 14px;
     }
+
     .avatar {
       width: 64px;
       height: 64px;
@@ -69,12 +76,14 @@
       box-shadow: 0 1px 2px rgba(25, 118, 210, 0.08);
       margin-right: 10px;
     }
+
     .label {
       font-weight: 500;
       color: #2d3a4a;
       font-size: 1.08rem;
       margin-bottom: 2px;
     }
+
     .code {
       font-size: 2rem;
       letter-spacing: 3px;
@@ -89,12 +98,14 @@
       min-width: 110px;
       text-align: center;
     }
+
     .actions {
       display: flex;
       flex-direction: column;
       gap: 8px;
       margin-left: 12px;
     }
+
     .icon-btn {
       background: #fff;
       color: #1976d2;
@@ -108,10 +119,12 @@
       align-items: center;
       gap: 4px;
     }
+
     .icon-btn:hover {
       background: #1976d2;
       color: #fff;
     }
+
     .progress-circle {
       width: 36px;
       height: 36px;
@@ -119,16 +132,20 @@
       position: relative;
       display: inline-block;
     }
+
     .progress-circle svg {
       transform: rotate(-90deg);
     }
+
     .progress-bg {
       stroke: #e3eafc;
     }
+
     .progress-bar {
       stroke: #1976d2;
       transition: stroke-dasharray 0.3s;
     }
+
     .add-btn {
       position: fixed;
       right: 32px;
@@ -148,9 +165,59 @@
       z-index: 10;
       transition: background 0.2s;
     }
+
     .add-btn:hover {
       background: #125ea7;
     }
+
+    .change-btn {
+      position: fixed;
+      right: 160px;
+      bottom: 32px;
+      background: #1976d2;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      font-size: 2.2rem;
+      box-shadow: 0 4px 16px rgba(25, 118, 210, 0.18);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: background 0.2s;
+    }
+
+    .change-btn:hover {
+      background: #125ea7;
+    }
+
+    .save-btn {
+      position: fixed;
+      right: 100px;
+      bottom: 32px;
+      background: #1976d2;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      font-size: 2.2rem;
+      box-shadow: 0 4px 16px rgba(76, 175, 80, 0.18);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: background 0.2s;
+    }
+
+    .save-btn:hover {
+      background: #388e3c;
+    }
+
     /* Modal styles */
     .modal-bg {
       position: fixed;
@@ -162,6 +229,7 @@
       justify-content: center;
       animation: fadeIn 0.2s;
     }
+
     .modal {
       background: #fff;
       border-radius: 12px;
@@ -171,6 +239,7 @@
       max-width: 90vw;
       animation: popIn 0.2s;
     }
+
     .modal h2 {
       margin-top: 0;
       color: #1976d2;
@@ -178,23 +247,27 @@
       margin-bottom: 18px;
       text-align: center;
     }
+
     .modal form {
       display: flex;
       flex-direction: column;
       gap: 14px;
     }
+
     .modal input[type="text"] {
       padding: 10px;
       border: 1px solid #cfd8dc;
       border-radius: 6px;
       font-size: 1rem;
     }
+
     .modal .modal-actions {
       display: flex;
       justify-content: flex-end;
       gap: 10px;
       margin-top: 10px;
     }
+
     .modal .modal-actions button {
       padding: 8px 18px;
       border-radius: 6px;
@@ -205,16 +278,20 @@
       color: #fff;
       transition: background 0.2s;
     }
+
     .modal .modal-actions button.cancel {
       background: #e0e0e0;
       color: #333;
     }
+
     .modal .modal-actions button.cancel:hover {
       background: #bdbdbd;
     }
+
     .modal .modal-actions button:not(.cancel):hover {
       background: #125ea7;
     }
+
     /* Toast styles */
     .toast {
       position: fixed;
@@ -232,43 +309,30 @@
       z-index: 200;
       transition: opacity 0.3s;
     }
+
     .toast.show {
       opacity: 1;
       pointer-events: auto;
     }
-    @media (max-width: 600px) {
-      .container { max-width: 99vw; padding: 18px 2vw 18px 2vw; border-radius: 10px; }
-      .add-btn { right: 12px; bottom: 12px; width: 64px; height: 64px; font-size: 2.5rem; }
-      .account { padding: 18px 8px; margin-bottom: 20px; border-radius: 14px; }
-      .avatar { width: 56px; height: 56px; font-size: 1.8rem; }
-      .label { font-size: 1.15rem; }
-      .code { font-size: 1.7rem; min-width: 90px; }
-      .actions { gap: 12px; margin-left: 8px; }
-      .icon-btn { font-size: 1.15rem; padding: 10px 16px; border-radius: 8px; min-width: 44px; }
-      .modal { min-width: 0; width: 98vw; max-width: 98vw; padding: 24px 8px 16px 8px; border-radius: 12px; }
-      .modal h2 { font-size: 1.25rem; }
-      .modal input[type="text"] { font-size: 1.15rem; padding: 14px; border-radius: 8px; }
-      .modal .modal-actions { gap: 12px; }
-      .modal .modal-actions button { font-size: 1.1rem; padding: 12px 22px; border-radius: 8px; }
-      .emoji-choice, .custom-avatar-btn { min-width: 48px !important; min-height: 48px !important; font-size: 2rem !important; padding: 10px 12px !important; border-radius: 8px !important; }
-      #customAvatarInput { width: 56px !important; font-size: 2rem !important; border-radius: 8px !important; }
-      #customAvatarHelp { font-size: 1rem !important; }
-      .toast { font-size: 1.1rem; padding: 16px 18px; border-radius: 10px; }
-    }
+
     .account:active {
       box-shadow: 0 2px 12px rgba(25, 118, 210, 0.18);
       background: #e3eafc;
     }
+
     .icon-btn:active {
       background: #1565c0;
       color: #fff;
     }
+
     @keyframes fadeIn {
       from { opacity: 0; } to { opacity: 1; }
     }
+
     @keyframes popIn {
       from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; }
     }
+
     .footer {
       text-align: center;
       color: #888;
@@ -278,6 +342,7 @@
       letter-spacing: 1px;
       user-select: none;
     }
+
     .info-box {
       background: #e3eafc;
       color: #1976d2;
@@ -288,6 +353,105 @@
       text-align: center;
       box-shadow: 0 1px 4px rgba(25, 118, 210, 0.06);
     }
+
+    @media (max-width: 600px) {
+      .container { 
+        max-width: 99vw; 
+        padding: 18px 2vw 18px 2vw; 
+        border-radius: 10px; 
+      }
+      .add-btn { 
+        right: 12px; 
+        bottom: 12px; 
+        width: 64px; 
+        height: 64px; 
+        font-size: 2.5rem; 
+      }
+      .change-btn { 
+        right: 140px; 
+        bottom: 12px; 
+        width: 64px; 
+        height: 64px; 
+        font-size: 2.5rem; 
+      }
+      .save-btn { 
+        right: 80px; 
+        bottom: 12px; 
+        width: 64px; 
+        height: 64px; 
+        font-size: 2.5rem; 
+      }
+      .account { 
+        padding: 18px 8px; 
+        margin-bottom: 20px; 
+        border-radius: 14px; 
+      }
+      .avatar { 
+        width: 56px; 
+        height: 56px; 
+        font-size: 1.8rem; 
+      }
+      .label { 
+        font-size: 1.15rem; 
+      }
+      .code { 
+        font-size: 1.7rem; 
+        min-width: 90px; 
+      }
+      .actions { 
+        gap: 12px; 
+        margin-left: 8px; 
+      }
+      .icon-btn { 
+        font-size: 1.15rem; 
+        padding: 10px 16px; 
+        border-radius: 8px; 
+        min-width: 44px; 
+      }
+      .modal { 
+        min-width: 0; 
+        width: 98vw; 
+        max-width: 98vw; 
+        padding: 24px 8px 16px 8px; 
+        border-radius: 12px; 
+      }
+      .modal h2 { 
+        font-size: 1.25rem; 
+      }
+      .modal input[type="text"] { 
+        font-size: 1.15rem; 
+        padding: 14px; 
+        border-radius: 8px; 
+      }
+      .modal .modal-actions { 
+        gap: 12px; 
+      }
+      .modal .modal-actions button { 
+        font-size: 1.1rem; 
+        padding: 12px 22px; 
+        border-radius: 8px; 
+      }
+      .emoji-choice, .custom-avatar-btn { 
+        min-width: 48px !important; 
+        min-height: 48px !important; 
+        font-size: 2rem !important; 
+        padding: 10px 12px !important; 
+        border-radius: 8px !important; 
+      }
+      #customAvatarInput { 
+        width: 56px !important; 
+        font-size: 2rem !important; 
+        border-radius: 8px !important; 
+      }
+      #customAvatarHelp { 
+        font-size: 1rem !important; 
+      }
+      .toast { 
+        font-size: 1.1rem; 
+        padding: 16px 18px; 
+        border-radius: 10px; 
+      }
+    }
   </style>
 </head>
 <body>
@@ -297,11 +461,12 @@
       <strong>Privacy Notice:</strong> All your data is <b>saved only in your browser</b> (localStorage). Nothing is sent to any server. We do not sell or share your information. Your privacy is fully respected.
     </div>
     <div style="display:flex;gap:10px;justify-content:center;margin-bottom:12px;">
-      <button onclick="showChangePasscodeModal()" class="icon-btn">🔒 Change Passcode</button>
     </div>
     <div class="accounts" id="accounts"></div>
   </div>
+  <button class="change-btn" id="changePasscodeBtn" onclick="showChangePasscodeModal()" title="Change Passcode">🔒</button>
   <button class="add-btn" id="addAccountBtn" title="Add Account">+</button>
+  <button class="save-btn" id="backupBtn" title="Backup">💾</button>
   <div id="modalRoot"></div>
   <div id="passcodeModalRoot"></div>
   <div class="toast" id="toast"></div>
@@ -638,27 +803,65 @@
     function setPasscodeHash(hash) {
       localStorage.setItem('2fa_passcode_hash', hash);
     }
+    
+    function initApp() {
+      document.getElementById('mainContainer').style.display = '';
+      renderAccountsList();
+      updateAllCodes();
+      if (!window.totpInterval) {
+        window.totpInterval = setInterval(updateAllCodes, 1000);
+      }
+      // Show backup reminder if no previous export and not dismissed
+      const lastExport = localStorage.getItem('last_export');
+      const noRemind = localStorage.getItem('no_backup_reminder');
+      if (!noRemind && !lastExport) {
+        showReminderModal();
+      }
+    }
     function showPasscodeModal(isSet = false) {
       const modalRoot = document.getElementById('passcodeModalRoot');
       // Hide add and change passcode buttons when modal is open
       document.getElementById('addAccountBtn').style.display = 'none';
-      var changeBtn = document.querySelector('button[onclick="showChangePasscodeModal()"]');
+      const changeBtn = document.getElementById('changePasscodeBtn');
       if (changeBtn) changeBtn.style.display = 'none';
+      document.getElementById('backupBtn').style.display = 'none';
       modalRoot.innerHTML = `
         <div class="modal-bg">
           <div class="modal">
             <h2>${isSet ? 'Set Passcode' : 'Enter Passcode'}</h2>
             <form id="passcodeForm">
-              <input type="password" id="passcodeInput" placeholder="${isSet ? 'New passcode' : 'Passcode'}" required style="font-size:1.2rem;padding:12px;border-radius:8px;" />
-              ${isSet ? '<input type="password" id="passcodeInput2" placeholder="Repeat passcode" required style="font-size:1.2rem;padding:12px;border-radius:8px;margin-top:8px;" />' : ''}
-              <div class="modal-actions" style="margin-top:14px;">
-                <button type="button" class="cancel">Cancel</button>
+              <input type="password" id="passcodeInput" placeholder="${isSet ? 'New passcode' : 'Passcode'}" style="font-size:1.2rem;padding:12px;border-radius:8px;" />
+              ${isSet ? `
+                <input type="password" id="passcodeInput2" placeholder="Repeat passcode" style="font-size:1.2rem;padding:12px;border-radius:8px;margin-top:8px;" />
+                <label style="display:flex;align-items:center;gap:8px;margin-top:12px;font-size:1rem;color:#333;"><input type="checkbox" id="noPasscode" /> Don't use passcode</label>
+              ` : ''}
+              <div class="modal-actions" style="margin-top:14px;justify-content:center;">
+                ${isSet ? '<button type="button" class="cancel">Cancel</button>' : ''}
                 <button type="submit">${isSet ? 'Set' : 'Unlock'}</button>
               </div>
             </form>
           </div>
         </div>
       `;
+  
+      if (isSet) {
+        const checkbox = document.getElementById('noPasscode');
+        const input1 = document.getElementById('passcodeInput');
+        const input2 = document.getElementById('passcodeInput2');
+        checkbox.onchange = function() {
+          const disabled = this.checked;
+          input1.disabled = disabled;
+          input2.disabled = disabled;
+          if (disabled) {
+            input1.value = '';
+            input2.value = '';
+          }
+        };
+        // Initial state
+        checkbox.checked = false;
+        input1.disabled = false;
+        input2.disabled = false;
+      }
       // Add Escape key handler
       function escHandler(e) {
         if (e.key === 'Escape') modalRoot.innerHTML = '';
@@ -667,49 +870,102 @@
       // Remove handler when modal closes
       const cleanup = () => document.removeEventListener('keydown', escHandler);
       document.getElementById('passcodeInput').focus();
-      document.querySelector('.cancel').onclick = function() {
-        modalRoot.innerHTML = '';
-        cleanup();
-        // If this is the first unlock (not set), show info message
-        if (!isSet && !document.getElementById('mainContainer').style.display) {
-          document.getElementById('mainContainer').style.display = 'none';
-          const info = document.createElement('div');
-          info.id = 'authInfoBlock';
-          info.style = 'text-align:center;margin:48px auto 0 auto;max-width:400px;padding:32px 18px;background:#fff;border-radius:14px;box-shadow:0 2px 16px rgba(25,118,210,0.10);color:#1976d2;font-size:1.18rem;';
-          info.innerHTML = '<b>🔒 You must enter your authentication passcode to access your accounts.</b>';
-          document.body.appendChild(info);
-        }
-        // Show buttons again
-        document.getElementById('addAccountBtn').style.display = '';
-        if (changeBtn) changeBtn.style.display = '';
-      };
+      if (isSet) {
+        document.querySelector('.cancel').onclick = function() {
+          modalRoot.innerHTML = '';
+          cleanup();
+          const mainContainer = document.getElementById('mainContainer');
+          const addBtn = document.getElementById('addAccountBtn');
+          const backupBtn = document.getElementById('backupBtn');
+          if (mainContainer.style.display === 'none') {
+            // Initial access, show info and hide everything
+            mainContainer.style.display = 'none';
+            let info = document.getElementById('authInfoBlock');
+            if (!info) {
+              info = document.createElement('div');
+              info.id = 'authInfoBlock';
+              info.style = 'text-align:center;margin:48px auto 0 auto;max-width:400px;padding:32px 18px;background:#fff;border-radius:14px;box-shadow:0 2px 16px rgba(25,118,210,0.10);color:#1976d2;font-size:1.18rem;';
+              info.innerHTML = '<b>🔒 You must enter your authentication passcode to access your accounts.</b>';
+              document.body.appendChild(info);
+            }
+            // Hide buttons
+            if (addBtn) addBtn.style.display = 'none';
+            if (changeBtn) changeBtn.style.display = 'none';
+            if (backupBtn) backupBtn.style.display = 'none';
+          } else {
+            // Not initial, show buttons back
+            if (addBtn) addBtn.style.display = '';
+            if (changeBtn) changeBtn.style.display = '';
+            if (backupBtn) backupBtn.style.display = '';
+          }
+        };
+      }
       document.getElementById('passcodeForm').onsubmit = function(e) {
         e.preventDefault();
-        const pass = document.getElementById('passcodeInput').value;
+        const pass = document.getElementById('passcodeInput').value.trim();
         if (isSet) {
-          const pass2 = document.getElementById('passcodeInput2').value;
-          if (pass !== pass2) {
-            showToast('Passcodes do not match!');
+          const checkbox = document.getElementById('noPasscode');
+          if (checkbox && checkbox.checked) {
+            localStorage.setItem('2fa_passcode_hash', '');
+            showToast('⚠️ Warning: Passcode disabled. This is not secure! Your 2FA accounts are unprotected.');
+            modalRoot.innerHTML = '';
+            initApp();
+            // Show buttons
+            document.getElementById('addAccountBtn').style.display = '';
+            if (changeBtn) changeBtn.style.display = '';
+            document.getElementById('backupBtn').style.display = '';
+            cleanup();
+          } else {
+            if (pass === '') {
+              showToast('Please enter a passcode or check "Don\'t use passcode".');
+              return;
+            }
+            const pass2 = document.getElementById('passcodeInput2').value.trim();
+            if (pass !== pass2) {
+              showToast('Passcodes do not match!');
+              return;
+            }
+            if (pass.length < 1) {
+              showToast('Passcode must be at least 1 character long!');
+              return;
+            }
+            localStorage.setItem('2fa_passcode_hash', simpleHash(pass));
+            showToast('Passcode set successfully!');
+            modalRoot.innerHTML = '';
+            initApp();
+            // Show buttons
+            document.getElementById('addAccountBtn').style.display = '';
+            if (changeBtn) changeBtn.style.display = '';
+            document.getElementById('backupBtn').style.display = '';
+            cleanup();
+          }
+        } else {
+          if (pass === '') {
+            showToast('Please enter your passcode.');
+            document.getElementById('passcodeInput').value = '';
+            document.getElementById('passcodeInput').focus();
             return;
           }
-          setPasscodeHash(simpleHash(pass));
-          modalRoot.innerHTML = '';
-          document.getElementById('mainContainer').style.display = '';
-        } else {
-          if (simpleHash(pass) === getPasscodeHash()) {
+          const storedHash = localStorage.getItem('2fa_passcode_hash');
+          if (storedHash && simpleHash(pass) === storedHash) {
             modalRoot.innerHTML = '';
-            document.getElementById('mainContainer').style.display = '';
+            // Remove info block if present
+            const info = document.getElementById('authInfoBlock');
+            if (info) info.remove();
+            initApp();
+            // Show buttons
+            document.getElementById('addAccountBtn').style.display = '';
+            if (changeBtn) changeBtn.style.display = '';
+            document.getElementById('backupBtn').style.display = '';
+            cleanup();
           } else {
             showToast('Incorrect passcode!');
+            document.getElementById('passcodeInput').value = '';
+            document.getElementById('passcodeInput').focus();
+            // Re-attach escape handler since we stay in modal
+            document.addEventListener('keydown', escHandler);
           }
         }
-        cleanup();
-        // Remove info block if present
-        const info = document.getElementById('authInfoBlock');
-        if (info) info.remove();
-        // Show buttons again
-        document.getElementById('addAccountBtn').style.display = '';
-        if (changeBtn) changeBtn.style.display = '';
       };
     }
     function showChangePasscodeModal() {
@@ -717,17 +973,161 @@
     }
     // On load, require passcode
     window.addEventListener('DOMContentLoaded', function() {
-      if (!getPasscodeHash()) {
-        showPasscodeModal(true);
+      const hash = localStorage.getItem('2fa_passcode_hash');
+      if (hash === null) {
+        showPasscodeModal(true); // New user
+      } else if (hash === '') {
+        initApp(); // No passcode
       } else {
-        showPasscodeModal(false);
+        showPasscodeModal(false); // Enter passcode
       }
     });
 
-    // Initial render
-    renderAccountsList();
-    updateAllCodes();
-    setInterval(updateAllCodes, 1000);
+    // Backup modal
+    function showBackupModal() {
+      const modalRoot = document.getElementById('modalRoot');
+      const lastExport = localStorage.getItem('last_export');
+      const lastImport = localStorage.getItem('last_import');
+      const formatDate = (iso) => iso ? new Date(iso).toLocaleString() : 'Never';
+      modalRoot.innerHTML = `
+        <div class="modal-bg">
+          <div class="modal">
+            <h2>Backup & Restore</h2>
+            <div style="margin-bottom:16px;">
+              <p style="margin:4px 0;"><strong>Last Export:</strong> ${formatDate(lastExport)}</p>
+              <p style="margin:4px 0;"><strong>Last Import:</strong> ${formatDate(lastImport)}</p>
+            </div>
+            <div style="margin-bottom:16px;">
+              <button type="button" onclick="exportAccounts()" style="width:100%;padding:12px;background:#1976d2;color:#fff;border:none;border-radius:6px;cursor:pointer;margin-bottom:12px;">📤 Export Accounts</button>
+              <input type="file" id="importFile" accept=".json" style="width:100%;padding:10px;border:1px solid #cfd8dc;border-radius:6px;" />
+              <button type="button" id="importBtn" disabled style="width:100%;padding:12px;background:#1976d2;color:#fff;border:none;border-radius:6px;cursor:pointer;margin-top:8px;">📥 Import Accounts</button>
+            </div>
+            <div class="modal-actions">
+              <button type="button" class="cancel">Close</button>
+            </div>
+          </div>
+        </div>
+      `;
+
+      const fileInput = document.getElementById('importFile');
+      const importBtn = document.getElementById('importBtn');
+
+      fileInput.onchange = function() {
+        importBtn.disabled = !this.files.length;
+      };
+
+      importBtn.onclick = function() {
+        const file = fileInput.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          try {
+            const importedAccounts = JSON.parse(e.target.result);
+            if (!Array.isArray(importedAccounts)) {
+              throw new Error('Invalid format: must be an array');
+            }
+            for (let acc of importedAccounts) {
+              if (!acc.label || !acc.secret) {
+                throw new Error('Invalid account data: missing label or secret');
+              }
+            }
+            saveAccounts(importedAccounts);
+            renderAccountsList();
+            updateAllCodes();
+            localStorage.setItem('last_import', new Date().toISOString());
+            showToast('Accounts imported successfully!');
+            modalRoot.innerHTML = '';
+          } catch (err) {
+            showToast('Import failed: ' + err.message);
+          }
+        };
+        reader.readAsText(file);
+      };
+
+      // Escape key handler
+      function escHandler(e) {
+        if (e.key === 'Escape') modalRoot.innerHTML = '';
+      }
+      document.addEventListener('keydown', escHandler);
+      const cleanup = () => document.removeEventListener('keydown', escHandler);
+
+      // Cancel and background click
+      document.querySelector('.cancel').onclick = () => { modalRoot.innerHTML = ''; cleanup(); };
+      document.querySelector('.modal-bg').onclick = (e) => {
+        if (e.target.classList.contains('modal-bg')) { modalRoot.innerHTML = ''; cleanup(); }
+      };
+    }
+
+    // Export accounts
+    function exportAccounts() {
+      const accounts = getAccounts();
+      const dataStr = JSON.stringify(accounts, null, 2);
+      const dataBlob = new Blob([dataStr], {type: 'application/json'});
+      const url = URL.createObjectURL(dataBlob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = '2fa-backup.json';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+      localStorage.setItem('last_export', new Date().toISOString());
+      showToast('Accounts exported!');
+    }
+
+    // Backup button
+    document.getElementById('backupBtn').onclick = showBackupModal;
+
+    // Reminder modal for backup
+    function showReminderModal() {
+      const modalRoot = document.getElementById('modalRoot');
+      modalRoot.innerHTML = `
+        <div class="modal-bg">
+          <div class="modal">
+            <h2>Peringatan Backup</h2>
+            <p style="margin-bottom:16px; line-height:1.5;">Harap backup 2FA code anda untuk menghindari kehilangan akses ke akun Anda jika terjadi masalah dengan browser.</p>
+            <button type="button" id="backupNowBtn" style="width:100%; padding:12px; background:#1976d2; color:#fff; border:none; border-radius:6px; cursor:pointer; margin-bottom:12px; font-size:1rem;">Backup Sekarang</button>
+            <label style="display:flex; align-items:center; gap:8px; margin-bottom:12px; font-size:1rem;">
+              <input type="checkbox" id="noRemind" />
+              Jangan ingatkan lagi
+            </label>
+            <div class="modal-actions">
+              <button type="button" class="ok">OK</button>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Event listeners
+      document.getElementById('backupNowBtn').onclick = function() {
+        modalRoot.innerHTML = '';
+        showBackupModal();
+      };
+
+      document.querySelector('.ok').onclick = function() {
+        const checked = document.getElementById('noRemind').checked;
+        if (checked) {
+          localStorage.setItem('no_backup_reminder', 'true');
+        }
+        modalRoot.innerHTML = '';
+      };
+
+      // Escape key handler
+      function escHandler(e) {
+        if (e.key === 'Escape') modalRoot.innerHTML = '';
+      }
+      document.addEventListener('keydown', escHandler);
+      const cleanup = () => document.removeEventListener('keydown', escHandler);
+
+      // Background click
+      document.querySelector('.modal-bg').onclick = (e) => {
+        if (e.target.classList.contains('modal-bg')) {
+          modalRoot.innerHTML = '';
+          cleanup();
+        }
+      };
+    }
 
     // Add account
     addBtn.onclick = function() {
