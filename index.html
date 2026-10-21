@@ -648,13 +648,22 @@
         border-radius: 10px; 
       }
     }
+    /* === Ad slot (added 2026-10-21) === */
+    .ad-slot {
+      max-width: 728px;
+      margin: 18px auto 8px auto;
+      padding: 10px;
+      text-align: center;
+      min-height: 90px;
+    }
+    .ad-slot:empty { display: none; }
   </style>
 </head>
 <body>
   <div class="container" id="mainContainer" style="display:none;">
     <h1>AUTH VAULT</h1>
     <div class="info-box">
-      <strong>Privacy Notice:</strong> All your data is <b>saved only in your browser</b> (localStorage). Nothing is sent to any server. We do not sell or share your information. Your privacy is fully respected.
+      <strong>Privacy Notice:</strong> All your data is <b>saved only in your browser</b> (localStorage). Nothing is sent to any server. We do not sell or share your information. Your privacy is fully respected. This page shows third-party ads; the ad network may use cookies to measure impressions.
     </div>
     <div style="display:flex;gap:10px;justify-content:center;margin-bottom:12px;">
     </div>
@@ -667,6 +676,12 @@
   <div id="passcodeModalRoot"></div>
   <div class="toast" id="toast"></div>
   <footer class="footer">© <a href="https://dnst.my.id" target="_blank">densat</a></footer>
+  <!-- === AD SLOT: paste the Native Banner code from the ad network between these markers === -->
+  <div class="ad-slot" id="adSlot">
+    <script async="async" data-cfasync="false" src="https://bicea.org/21/9f9672bea09db9339ec10b9c4af3d56a"></script>
+    <div id="container-9f9672bea09db9339ec10b9c4af3d56a"></div>
+  </div>
+  <!-- === /AD SLOT === -->
   <script>
     // Robust Base32 decode
     function base32toBytes(base32) {
